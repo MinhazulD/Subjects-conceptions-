@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Pathways</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+        .nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <button onclick="showContent('fundamentals')">Fundamental Programming</button>
+            <button onclick="showContent('automation')">Automation</button>
+            <button onclick="showContent('biomedical')">Biomedical Engineering</button>
+            <button onclick="showContent('machine-learning')">Machine Learning</button>
+            <button onclick="showContent('advanced')">Advanced Topics</button>
+            <button onclick="showContent('space')">Space Engineering</button>
+            <button onclick="showContent('technology')">Technology Concepts</button>
+            <button onclick="showContent('recognition')">Recognition</button>
+        </div>
+        <div id="fundamentals" class="content">
+            <h2>Fundamental Programming</h2>
+            <p>Learn the basics of programming including:</p>
+            <ul>
+                <li>Variables and Data Types</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Object-Oriented Programming</li>
+                <li>Data Structures</li>
+            </ul>
+        </div>
+        <div id="automation" class="content">
+            <h2>Automation</h2>
+            <p>Explore automation technologies and techniques:</p>
+            <ul>
+                <li>Automation Tools and Platforms</li>
+                <li>Robotic Process Automation (RPA)</li>
+                <li>Industrial Automation</li>
+                <li>Home Automation</li>
+                <li>IoT (Internet of Things)</li>
+            </ul>
+        </div>
+        <div id="biomedical" class="content">
+            <h2>Biomedical Engineering</h2>
+            <p>Understand biomedical engineering principles:</p>
+            <ul>
+                <li>Medical Devices and Sensors</li>
+                <li>Biomaterials</li>
+                <li>Biomedical Instrumentation</li>
+                <li>Health Informatics</li>
+                <li>Medical Imaging</li>
+            </ul>
+        </div>
+        <div id="machine-learning" class="content">
+            <h2>Machine Learning</h2>
+            <p>Dive into machine learning concepts:</p>
+            <ul>
+                <li>Supervised Learning</li>
+                <li>Unsupervised Learning</li>
+                <li>Neural Networks</li>
+                <li>Deep Learning</li>
+                <li>Natural Language Processing</li>
+            </ul>
+        </div>
+        <div id="advanced" class="content">
+            <h2>Advanced Topics</h2>
+            <p>Explore advanced subjects in technology:</p>
+            <ul>
+                <li>Nuclear Physics</li>
+                <li>Quantum Computing</li>
+                <li>Advanced Robotics</li>
+                <li>Complex Systems</li>
+                <li>High-Performance Computing</li>
+            </ul>
+        </div>
+        <div id="space" class="content">
+            <h2>Space Engineering</h2>
+            <p>Study space exploration and technologies:</p>
+            <ul>
+                <li>Spacecraft Design</li>
+                <li>Space Missions</li>
+                <li>Satellite Technology</li>
+                <li>Astronautics</li>
+                <li>Space Robotics</li>
+            </ul>
+        </div>
+        <div id="technology" class="content">
+            <h2>Technology Concepts</h2>
+            <p>Learn about various technology concepts:</p>
+            <ul>
+                <li>Emerging Technologies</li>
+                <li>Cybersecurity</li>
+                <li>Blockchain</li>
+                <li>Augmented Reality (AR)</li>
+                <li>Virtual Reality (VR)</li>
+            </ul>
+        </div>
+        <div id="recognition" class="content">
+            <h2>Recognition</h2>
+            <p>Concepts related to recognition and AI:</p>
+            <ul>
+                <li>Human Recognition</li>
+                <li>Facial Recognition</li>
+                <li>Speech Recognition</li>
+                <li>Emotion Recognition</li>
+                <li>Behavior Analysis</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function showContent(id) {
+            // Hide all content sections
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Show the selected content section
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
